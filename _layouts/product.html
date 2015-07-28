@@ -2,7 +2,6 @@
 layout: page
 ---
 
-{% assign page.title = page.name %}
 <link rel="stylesheet" href="/css/lightbox.css" />
 <div class="row">
     <div class="col-md-7">
@@ -10,48 +9,48 @@ layout: page
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item {% if page.video != null %}aspect-ratio{% endif %} active">
-                    <a class="{% if page.video != null %}hidden{% endif %}" href="/img/products/{{ page.title }}/1.png" data-lightbox="highlights">
-                        <img src="/img/products/{{ page.title }}/1.png" alt="...">
+                    <a class="{% if page.video != null %}hidden{% endif %}" href="/img/products/{{ page.directory }}/1.png" data-lightbox="highlights">
+                        <img src="/img/products/{{ page.directory }}/1.png" alt="...">
                     </a>
                     <iframe class="{% if page.video == null %}hidden{% endif %}" src="{{ page.video }}" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="item">
-                    <a href="/img/products/{{ page.title }}/2.png" data-lightbox="highlights">
-                        <img src="/img/products/{{ page.title }}/2.png" alt="...">
+                    <a href="/img/products/{{ page.directory }}/2.png" data-lightbox="highlights">
+                        <img src="/img/products/{{ page.directory }}/2.png" alt="...">
                     </a>
                 </div>
                 <div class="item">
-                    <a href="/img/products/{{ page.title }}/3.png" data-lightbox="highlights">
-                        <img src="/img/products/{{ page.title }}/3.png" alt="...">
+                    <a href="/img/products/{{ page.directory }}/3.png" data-lightbox="highlights">
+                        <img src="/img/products/{{ page.directory }}/3.png" alt="...">
                     </a>
                 </div>
                 <div class="item">
-                    <a href="/img/products/{{ page.title }}/4.png" data-lightbox="highlights">
-                        <img src="/img/products/{{ page.title }}/4.png" alt="...">
+                    <a href="/img/products/{{ page.directory }}/4.png" data-lightbox="highlights">
+                        <img src="/img/products/{{ page.directory }}/4.png" alt="...">
                     </a>
                 </div>
                 <div class="item">
-                    <a href="/img/products/{{ page.title }}/5.png" data-lightbox="highlights">
-                        <img src="/img/products/{{ page.title }}/5.png" alt="...">
+                    <a href="/img/products/{{ page.directory }}/5.png" data-lightbox="highlights">
+                        <img src="/img/products/{{ page.directory }}/5.png" alt="...">
                     </a>
                 </div>
             </div>
             <!-- Indicators -->
             <ol class="carousel-indicators">
                 <li class="active" data-slide-to="0" data-target="#carousel">
-                    <img src="/img/products/{{ page.title }}/1.png" alt="..." class="img-thumbnail" data-target="#carousel">
+                    <img src="/img/products/{{ page.directory }}/1.png" alt="..." class="img-thumbnail" data-target="#carousel">
                 </li>
                 <li data-slide-to="1" data-target="#carousel">
-                    <img src="/img/products/{{ page.title }}/2.png" alt="..." class="img-thumbnail" data-target="#carousel">
+                    <img src="/img/products/{{ page.directory }}/2.png" alt="..." class="img-thumbnail" data-target="#carousel">
                 </li>
                 <li data-slide-to="2" data-target="#carousel">
-                    <img src="/img/products/{{ page.title }}/3.png" alt="..." class="img-thumbnail" data-target="#carousel">
+                    <img src="/img/products/{{ page.directory }}/3.png" alt="..." class="img-thumbnail" data-target="#carousel">
                 </li>
                 <li data-slide-to="3" data-target="#carousel">
-                    <img src="/img/products/{{ page.title }}/4.png" alt="..." class="img-thumbnail" data-target="#carousel">
+                    <img src="/img/products/{{ page.directory }}/4.png" alt="..." class="img-thumbnail" data-target="#carousel">
                 </li>
                 <li data-slide-to="4" data-target="#carousel">
-                    <img src="/img/products/{{ page.title }}/5.png" alt="..." class="img-thumbnail" data-target="#carousel">
+                    <img src="/img/products/{{ page.directory }}/5.png" alt="..." class="img-thumbnail" data-target="#carousel">
                 </li>
             </ol>
         </div>
@@ -59,7 +58,7 @@ layout: page
     <div class="col-md-5">
         <div id="product">
             <div id="product-banner" class="hide-on-mobile">
-                <img alt="" title="" src="/img/products/{{ page.title }}/banner.png">
+                <img alt="" title="" src="/img/products/{{ page.directory }}/banner.png">
             </div>
             <p class="product-description">
                {{ page.description }}
