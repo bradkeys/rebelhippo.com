@@ -1,5 +1,6 @@
 var posts = document.querySelector('#posts');
 var no_news_template = '<p>No news yet, please come back another time.</p>';
+var titleGlyph = '<span class="glyphicon glyphicon-link" aria-hidden="true"></span> ';
 var uri = 'http://api.tumblr.com/v2/blog/' + $('#blog_api').attr('value') + '/posts/?callback=?';
 var apiKey = '3ABbizgTjTp9XiXDwnco5WuU9UsvYrINMxNhnqufdPbe3mVdQa';
 var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
@@ -25,8 +26,8 @@ function AppendPost (post) {
 
     // Insert title
     var title =  postTemplate.content.querySelector('.blog-post-title a');
-    title.src = post.post_url;
-    title.textContent = post.title;
+    title.href = post.post_url;
+    title.innerHTML = titleGlyph + post.title;
 
     // Insert Date
     var d = post.date.split(' ')[0].split('-');
