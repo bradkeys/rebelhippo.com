@@ -1,0 +1,68 @@
+---
+layout: page
+title: Contact
+---
+
+<div id="contact">
+    <div class="row">
+        <div class="col-sm-7">
+            <form action="//formspree.io/contact@rebelhippo.com" method="post">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="_replyto" placeholder="example@domain.com">
+                </div>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="Name" placeholder="Jane Doe">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea type="text" class="form-control" id="message" name="Message" rows="5" placeholder="Your message here..."></textarea>
+                </div>
+                <input type="text" name="_gotcha" style="display:none" />
+                <input type="hidden" name="_subject" value="Contact - Rebel Hippo Inc." />
+                <input type="hidden" name="_next" value="index.html#thanks" />
+                <button type="submit" class="btn btn-default" value="Send">Submit</button>
+            </form>
+        </div>
+        <div class="col-sm-4 col-sm-offset-1">
+            <div class="info">
+                <div class="row">
+                    <span class="col-xs-2">
+                        <img src="{{ site.url }}img/icons/email.png" />
+                    </span>
+                    <span class="col-xs-10">
+                        <span class="type">Email</span>
+                        <span class="data">
+                            <address>
+                                <a href="mailto:contact@rebelhippo.com">contact@rebelhippo.com</a>
+                            </address>
+                        </span>
+                    </span>
+                </div>
+                <div class="row">
+                    <span class="col-xs-2">
+                        <img src="{{ site.url }}img/icons/facebook.png" />
+                    </span>
+                    <span class="col-xs-10">
+                        <span class="type">Facebook</span>
+                        <span class="data">
+                            <a href="https://www.facebook.com/rebelhippo">Community Page</a>
+                        </span>
+                    </span>
+                </div>
+                <div class="row">
+                    <span class="col-xs-2">
+                        <img src="{{ site.url }}img/icons/twitter.png" />
+                    </span>
+                    <span class="col-xs-10">
+                        <span class="type">Twitter</span>
+                        <span class="data">
+                            <a href="https://twitter.com/RebelHippoInc">@RebelHippoInc</a>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
