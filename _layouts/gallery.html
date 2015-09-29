@@ -1,0 +1,17 @@
+---
+layout: page
+---
+
+<link rel="stylesheet" href="/css/lightbox.css" />
+
+<h2>Gallery</h2>
+
+<div id="gallery">
+    {% for image in page.images reversed %}
+      <a href="/img/products/{{ page.directory }}/gallery/{{ image[0] }}" data-lightbox="gallery" data-title="{{ image[1] }}">
+          <img src="/img/products/{{ page.directory }}/gallery/{{ image[0] }}" alt="{{ image[1] }}" title="{{ image[1] }}">
+      </a>
+    {% endfor %}
+</div>
+
+<script src="/js/lightbox.min.js"></script>
