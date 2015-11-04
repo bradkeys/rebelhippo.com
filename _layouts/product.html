@@ -79,6 +79,8 @@ layout: page
     </div>
 </div>
 
+
+{% if page.gallery %}
 <div id="gallery-link" class="jumbotron">
     <div>
       <h1><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Gallery</h1>
@@ -86,6 +88,7 @@ layout: page
       <p><a class="btn btn-primary btn-lg" href="/galleries/{{ page.directory }}" role="button">View</a></p>
     </div>
 </div>
+{% endif %}
 
 <div id="news">
     <h2>
