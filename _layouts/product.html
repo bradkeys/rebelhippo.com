@@ -63,15 +63,26 @@ layout: page
             <p class="product-description">
                {{ page.content }}
             </p>
+            {% if page.kickstarter %}
+            <a href="/kickstarter">
+                <img src="/img/kickstarter-logo.png" width="33%"/>
+                <p>Get notified when our campaign goes live!</p>
+            </a>
+            {% endif %}
+
+            {% if page.release %}
             <p class="product-info">
                 <strong>Release Date:</strong> {{ page.release }}
             </p>
+            {% endif %}
+            {% if page.platforms %}
             <p class="product-info">
                 <strong>Platforms:</strong>
                 {% for platform in page.platforms %}
                     <a href="{{ platform[1] }}">{{ platform[0] }}</a>
                 {% endfor %}
             </p>
+            {% endif %}
             <p class="product-info{% if page.website == null %} hidden{% endif %}">
                 <strong>Website:</strong> <a href="{{ page.website }}">{{ page.website }}</a>
             </p>
