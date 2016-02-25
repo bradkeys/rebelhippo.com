@@ -22,7 +22,10 @@ function GetPosts (postLimit, postOffset, callback) {
 }
 
 function AppendPost (post) {
-    postTemplate.content.querySelector('.blog-content').innerHTML = post.body;
+    // Ensure larger sized images are being fetched from Tumblr.
+    var content = post.body.replace(/540/g, '1280');
+
+    postTemplate.content.querySelector('.blog-content').innerHTML = content;
 
     // Insert title
     var title =  postTemplate.content.querySelector('.blog-post-title a');
