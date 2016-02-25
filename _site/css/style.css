@@ -267,10 +267,16 @@ footer {
 
 .blog-post {
     margin-bottom: 25px;
+    text-align: justify;
+}
+
+.blog-post p {
+    font-size: 1.2em;
 }
 
 .blog-post img {
     max-width: 100%;
+    width: 100%;
 }
 
 .blog-content > div {
