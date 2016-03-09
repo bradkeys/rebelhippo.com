@@ -23,7 +23,8 @@ function GetPosts (postLimit, postOffset, callback) {
 
 function AppendPost (post) {
     // Ensure larger sized images are being fetched from Tumblr.
-    var content = post.body.replace(/540/g, '1280');
+    var content = post.body.replace(/540.png/g, '1280.png');
+    content = content.replace(/540.jpg/g, '1280.jpg');
 
     postTemplate.content.querySelector('.blog-content').innerHTML = content;
 
