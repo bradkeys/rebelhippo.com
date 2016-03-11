@@ -265,6 +265,10 @@ footer {
     width: 25px;
 }
 
+#press {
+    margin-top: 100px;
+}
+
 .blog-post {
     margin-bottom: 25px;
     text-align: justify;
