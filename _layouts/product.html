@@ -8,50 +8,24 @@ layout: page
         <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="false">
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
-                <div class="item {% if page.video != null %}aspect-ratio{% endif %} active">
-                    <a class="{% if page.video != null %}hidden{% endif %}" href="/img/products/{{ page.directory }}/1.png" data-lightbox="highlights">
-                        <img src="/img/products/{{ page.directory }}/1.png" alt="...">
+                {% for slide in page.slides %}
+                <div class="item {% if forloop.first and page.video != null %}aspect-ratio{% endif %} {% if forloop.first %}active{% endif %}">
+                    <a class="{% if forloop.first and page.video != null %}hidden{% endif %}" href="/img/products/{{ page.directory }}/{{ slide }}" data-lightbox="highlights">
+                        <img src="/img/products/{{ page.directory }}/{{ slide }}" alt="...">
                     </a>
-                    <iframe class="{% if page.video == null %}hidden{% endif %}" src="{{ page.video }}" frameborder="0" allowfullscreen></iframe>
+                    {% if forloop.first and page.video != null %}
+                    <iframe src="{{ page.video }}" frameborder="0" allowfullscreen></iframe>
+                    {% endif %}
                 </div>
-                <div class="item">
-                    <a href="/img/products/{{ page.directory }}/2.png" data-lightbox="highlights">
-                        <img src="/img/products/{{ page.directory }}/2.png" alt="...">
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="/img/products/{{ page.directory }}/3.png" data-lightbox="highlights">
-                        <img src="/img/products/{{ page.directory }}/3.png" alt="...">
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="/img/products/{{ page.directory }}/4.png" data-lightbox="highlights">
-                        <img src="/img/products/{{ page.directory }}/4.png" alt="...">
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="/img/products/{{ page.directory }}/5.png" data-lightbox="highlights">
-                        <img src="/img/products/{{ page.directory }}/5.png" alt="...">
-                    </a>
-                </div>
+                {% endfor %}
             </div>
             <!-- Indicators -->
             <ol class="carousel-indicators">
-                <li class="active" data-slide-to="0" data-target="#carousel">
-                    <img src="/img/products/{{ page.directory }}/1.png" alt="..." class="img-thumbnail" data-target="#carousel">
+                {% for slide in page.slides %}
+                <li {% if forloop.first %}class="active"{% endif %} data-slide-to="{{ forloop.index0 }}" data-target="#carousel">
+                    <img src="/img/products/{{ page.directory }}/{{ slide }}" alt="..." class="img-thumbnail" data-target="#carousel">
                 </li>
-                <li data-slide-to="1" data-target="#carousel">
-                    <img src="/img/products/{{ page.directory }}/2.png" alt="..." class="img-thumbnail" data-target="#carousel">
-                </li>
-                <li data-slide-to="2" data-target="#carousel">
-                    <img src="/img/products/{{ page.directory }}/3.png" alt="..." class="img-thumbnail" data-target="#carousel">
-                </li>
-                <li data-slide-to="3" data-target="#carousel">
-                    <img src="/img/products/{{ page.directory }}/4.png" alt="..." class="img-thumbnail" data-target="#carousel">
-                </li>
-                <li data-slide-to="4" data-target="#carousel">
-                    <img src="/img/products/{{ page.directory }}/5.png" alt="..." class="img-thumbnail" data-target="#carousel">
-                </li>
+                {% endfor %}
             </ol>
         </div>
     </div>
