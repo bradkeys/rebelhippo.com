@@ -11,7 +11,7 @@ layout: page
                 {% for slide in page.slides %}
                 <div class="item {% if forloop.first and page.video != null %}aspect-ratio{% endif %} {% if forloop.first %}active{% endif %}">
                     <a class="{% if forloop.first and page.video != null %}hidden{% endif %}" href="/img/products/{{ page.directory }}/{{ slide }}" data-lightbox="highlights">
-                        <img src="/img/products/{{ page.directory }}/{{ slide }}" alt="...">
+                        <img src="/img/products/{{ page.directory }}/{{ slide }}" alt="..." class="hvr-grow">
                     </a>
                     {% if forloop.first and page.video != null %}
                     <iframe src="{{ page.video }}" frameborder="0" allowfullscreen></iframe>
@@ -23,7 +23,7 @@ layout: page
             <ol class="carousel-indicators">
                 {% for slide in page.slides %}
                 <li {% if forloop.first %}class="active"{% endif %} data-slide-to="{{ forloop.index0 }}" data-target="#carousel">
-                    <img src="/img/products/{{ page.directory }}/{{ slide }}" alt="..." class="img-thumbnail" data-target="#carousel">
+                    <img src="/img/products/{{ page.directory }}/{{ slide }}" alt="..." class="img-thumbnail hvr-pop" data-target="#carousel">
                 </li>
                 {% endfor %}
             </ol>
