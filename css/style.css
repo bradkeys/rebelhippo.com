@@ -208,6 +208,11 @@ footer hr {
     margin: 0 auto;
 }
 
+.carousel-inner img {
+    max-height: 360px;
+    margin: 0 auto;
+}
+
 #carousel iframe {
     width: 100%;
 }
@@ -346,14 +351,9 @@ footer hr {
     padding: 15px;
 }
 
-#gallery img {
-    height: 150px;
-    margin: 10px 5px;
-    border: 2px solid black;
-}
-
-#gallery img:hover {
-    border: 2px solid blue;
+#gallery .thumbnail {
+    margin: 3px;
+    border-radius: 5px;
 }
 
 #gallery a:hover {

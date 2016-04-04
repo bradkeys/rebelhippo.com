@@ -9,7 +9,7 @@ layout: page
 <div id="gallery">
     {% for image in page.images reversed %}
       <a href="/img/products/{{ page.directory }}/gallery/{{ image[0] }}" data-lightbox="gallery" data-title="{{ image[1] }}">
-          <img src="/img/products/{{ page.directory }}/gallery/{{ image[0] }}" alt="{{ image[1] }}" title="{{ image[1] }}">
+          <img class="thumbnail hvr-pop hvr-glow" src="/img/products/{{ page.directory }}/gallery/thumbs/{{ image[0] }}" alt="{{ image[1] }}" title="{{ image[1] }}">
       </a>
     {% endfor %}
 </div>
