@@ -393,61 +393,6 @@ footer {
     background-color: rgba(255, 255, 255, 0.7);
 }
 
-/* mobile scaling */
-
-@media all and (max-width: 990px)  {
-    .hide-on-mobile {
-        visibility: hidden;
-        clear: both;
-        display: none;
-    }
-
-    h1 {
-        text-align: center;
-    }
-
-    #header {
-        flex-wrap: wrap;
-        -webkit-flex-direction: column;
-        flex-direction: column;
-    }
-
-    #nav-links {
-        margin: 15px 0;
-    }
-
-    #nav-links a, #nav-links button {
-        font-size: 1em;
-    }
-
-    #social-links {
-        -webkit-flex-direction: row;
-        flex-direction: row;
-    }
-
-    #social-links a {
-        margin-right: 5px;
-    }
-
-    #product {
-        margin-top: 75px;
-        max-width: 800px;
-    }
-
-    #news {
-        margin-top: 15px;
-    }
-
-    .blog-post-title {
-        font-size: 1.1em;
-    }
-
-    #gallery img {
-        height: 100px;
-    }
-}
-
-
 /* Bootstrap Buttons */
 
 .btn {
@@ -486,4 +431,65 @@ footer {
 .btn-sharp:hover {
     color: white;
     background-color: black;
+}
+
+/* mobile scaling */
+
+@media all and (max-width: 990px)  {
+    .hide-on-mobile {
+        visibility: hidden;
+        clear: both;
+        display: none;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 3em;
+    }
+
+    #header {
+        flex-wrap: wrap;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+
+    #nav-links {
+        margin: 15px 0;
+    }
+
+    #nav-links a, #nav-links button {
+        font-size: 1em;
+    }
+
+    #social-links {
+        -webkit-flex-direction: row;
+        flex-direction: row;
+    }
+
+    #social-links a {
+        margin-right: 5px;
+    }
+
+    #product {
+        margin-top: 75px;
+        max-width: 800px;
+    }
+
+    #news {
+        margin-top: 15px;
+    }
+
+    .blog-post-title {
+        font-size: 1em;
+    }
+
+    #gallery img {
+        height: 100px;
+    }
+
+    .btn {
+        padding: 14px 8px;
+        letter-spacing: 0px;
+        font-weight: 500;
+    }
 }
