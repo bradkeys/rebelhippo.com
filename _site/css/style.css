@@ -393,45 +393,7 @@ footer {
     background-color: rgba(255, 255, 255, 0.7);
 }
 
-/* Bootstrap Buttons */
-
-.btn {
-    padding: 14px 24px;
-    border: 0 none;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.btn:focus, .btn:active:focus, .btn.active:focus {
-    outline: 0 none;
-}
-
-.btn-primary {
-    background: #0099cc;
-    color: #ffffff;
-}
-
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-    background: #33a6cc;
-}
-
-.btn-primary:active, .btn-primary.active {
-    background: #007299;
-    box-shadow: none;
-}
-
-.btn-sharp {
-    border-radius: 2;
-    background-color: white;
-    border: 2px solid black;
-    color: black;
-}
-
-.btn-sharp:hover {
-    color: white;
-    background-color: black;
-}
+/* mobile scaling */
 
 @media all and (max-width: 990px)  {
     .hide-on-mobile {
@@ -476,7 +438,52 @@ footer {
         margin-top: 15px;
     }
 
+    .blog-post-title {
+        font-size: 1.1em;
+    }
+
     #gallery img {
         height: 100px;
     }
+}
+
+
+/* Bootstrap Buttons */
+
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+.btn-primary {
+    background: #0099cc;
+    color: #ffffff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #33a6cc;
+}
+
+.btn-primary:active, .btn-primary.active {
+    background: #007299;
+    box-shadow: none;
+}
+
+.btn-sharp {
+    border-radius: 2;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+}
+
+.btn-sharp:hover {
+    color: white;
+    background-color: black;
 }
