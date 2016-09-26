@@ -51,7 +51,7 @@ layout: page
             </p>
             {% endif %}
             <p class="product-info{% if page.website == null %} hidden{% endif %}">
-                <strong>Website:</strong> <a href="{{ page.website }}">{{ page.website }}</a>
+                <strong>Website:</strong> <a href="{{ page.website }}">{{ page.website | remove:'http://' | remove:'https://' }}</a>
             </p>
             {% if page.platforms %}
             <p class="product-info">
