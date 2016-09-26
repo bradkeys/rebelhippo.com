@@ -115,11 +115,11 @@ nav {
 
 main {
     position: relative;
-    overflow: hidden;
     margin-top: 25px;
     margin-bottom: 15px;
     padding: 0px 25px;
     min-height: 850px;
+    overflow: hidden;
 }
 
 main > img {
@@ -443,6 +443,10 @@ footer hr {
 .btn-sharp:hover {
     color: white;
     background-color: black;
+}
+
+.platform-badge {
+    width: 175px;
 }
 
 /* mobile scaling */
