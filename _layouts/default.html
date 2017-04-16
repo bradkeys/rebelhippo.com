@@ -5,7 +5,9 @@
       <div id="website">
           <div id="header">
               <div id="logo">
-                  <img src="/img/logo.png" />
+                  <a href="/">
+                      <img src="/img/logo.png" />
+                  </a>
               </div>
               <nav>
                   <img class="hide-on-mobile" src="/img/concept_art.png" />
@@ -37,6 +39,10 @@
                   </div>
               </div>
           </div>
+          <!-- Hack to let the home page carousel ignore margin rules -->
+          {% if page.title == 'Home' %}
+            {% include carousel.html %}
+          {% endif %}
           <main>
               {{ content }}
           </main>

@@ -3,106 +3,108 @@ layout: page
 ---
 
 <link rel="stylesheet" href="/css/lightbox.css" />
-<div class="row">
-    <div class="col-md-7">
-        <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="false">
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                {% for slide in page.slides %}
-                <div class="item {% if forloop.first and page.video != null %}aspect-ratio{% endif %} {% if forloop.first %}active{% endif %}">
-                    <a class="{% if forloop.first and page.video != null %}hidden{% endif %}" href="/img/products/{{ page.directory }}/{{ slide }}" data-lightbox="highlights">
-                        <img src="/img/products/{{ page.directory }}/{{ slide }}" alt="..." class="hvr-grow">
-                    </a>
-                    {% if forloop.first and page.video != null %}
-                    <iframe src="{{ page.video }}" frameborder="0" allowfullscreen></iframe>
-                    {% endif %}
+<div id="product-page">
+    <div class="row">
+        <div class="col-md-7">
+            <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    {% for slide in page.slides %}
+                    <div class="item {% if forloop.first and page.video != null %}aspect-ratio{% endif %} {% if forloop.first %}active{% endif %}">
+                        <a class="{% if forloop.first and page.video != null %}hidden{% endif %}" href="/img/products/{{ page.directory }}/{{ slide }}" data-lightbox="highlights">
+                            <img src="/img/products/{{ page.directory }}/{{ slide }}" alt="..." class="hvr-grow">
+                        </a>
+                        {% if forloop.first and page.video != null %}
+                        <iframe src="{{ page.video }}" frameborder="0" allowfullscreen></iframe>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    {% for slide in page.slides %}
+                    <li {% if forloop.first %}class="active"{% endif %} data-slide-to="{{ forloop.index0 }}" data-target="#carousel">
+                        <img src="/img/products/{{ page.directory }}/{{ slide }}" alt="..." class="img-thumbnail hvr-pop" data-target="#carousel">
+                    </li>
+                    {% endfor %}
+                </ol>
             </div>
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                {% for slide in page.slides %}
-                <li {% if forloop.first %}class="active"{% endif %} data-slide-to="{{ forloop.index0 }}" data-target="#carousel">
-                    <img src="/img/products/{{ page.directory }}/{{ slide }}" alt="..." class="img-thumbnail hvr-pop" data-target="#carousel">
-                </li>
-                {% endfor %}
-            </ol>
         </div>
-    </div>
-    <div class="col-md-5">
-        <div id="product">
-            <div id="product-banner" class="hide-on-mobile">
-                <img alt="" title="" src="/img/products/{{ page.directory }}/banner.png">
-            </div>
-            <p class="product-description">
-               {{ page.content }}
-            </p>
-            {% if page.kickstarter %}
-            <a href="/kickstarter">
-                <img src="/img/kickstarter-logo.png" width="33%"/>
-            </a>
+        <div class="col-md-5">
+            <div id="product">
+                <div id="product-banner" class="hide-on-mobile">
+                    <img alt="" title="" src="/img/products/{{ page.directory }}/banner.png">
+                </div>
+                <p class="product-description">
+                   {{ page.content }}
+                </p>
+                {% if page.kickstarter %}
+                <a href="/kickstarter">
+                    <img src="/img/kickstarter-logo.png" width="33%"/>
+                </a>
 
-            <br /><br />
-            {% endif %}
-
-            {% if page.release %}
-            <p class="product-info">
-                <strong>Release Date:</strong> {{ page.release }}
-            </p>
-            {% endif %}
-            <p class="product-info{% if page.website == null %} hidden{% endif %}">
-                <strong>Website:</strong> <a href="{{ page.website }}">{{ page.website | remove:'http://' | remove:'https://' }}</a>
-            </p>
-            {% if page.platforms %}
-            <p class="product-info">
-                {% if page.badges == null %}
-                <strong>Platforms:</strong>
+                <br /><br />
                 {% endif %}
 
-                {% for platform in page.platforms %}
-                    {% if page.badges %}
+                {% if page.release %}
+                <p class="product-info">
+                    <strong>Release Date:</strong> {{ page.release }}
+                </p>
+                {% endif %}
+                <p class="product-info{% if page.website == null %} hidden{% endif %}">
+                    <strong>Website:</strong> <a href="{{ page.website }}">{{ page.website | remove:'http://' | remove:'https://' }}</a>
+                </p>
+                {% if page.platforms %}
+                <p class="product-info">
+                    {% if page.badges == null %}
+                    <strong>Platforms:</strong>
+                    {% endif %}
 
-                    {% for badge in page.badges %}
-                        {% if badge[0] == platform[0] %}
-                        <a href="{{ platform[1] }}">
-                            <img class="platform-badge hvr-grow" src="/img/badges/{{ badge[1] }}" />
-                        </a>
+                    {% for platform in page.platforms %}
+                        {% if page.badges %}
+
+                        {% for badge in page.badges %}
+                            {% if badge[0] == platform[0] %}
+                            <a href="{{ platform[1] }}">
+                                <img class="platform-badge hvr-grow" src="/img/badges/{{ badge[1] }}" />
+                            </a>
+                            {% endif %}
+                        {% endfor %}
+
+                        {% else %}
+                        <a href="{{ platform[1] }}">{{ platform[0] }}</a>
                         {% endif %}
                     {% endfor %}
-
-                    {% else %}
-                    <a href="{{ platform[1] }}">{{ platform[0] }}</a>
-                    {% endif %}
-                {% endfor %}
-            </p>
-            {% endif %}
+                </p>
+                {% endif %}
+            </div>
         </div>
     </div>
-</div>
 
 
-{% if page.gallery %}
-<div id="gallery-link" class="jumbotron hvr-glow">
-    <h1><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Gallery</h1>
-    <p>The latest art and screenshots!</p>
-    <p><a class="btn btn-primary btn-lg hvr-grow" href="/galleries/{{ page.directory }}" role="button">View</a></p>
-</div>
-{% endif %}
-
-<div id="news">
-    <h2>
-        News
-        <span>
-            <a href="feed://{{ page.blog }}/rss">
-                <img src="/img/icons/rss.png">
-            </a>
-        </span>
-    </h2>
-    <div id="posts">
-        <img class="loading-indicator" src="/img/ajax-loader.gif" />
+    {% if page.gallery %}
+    <div id="gallery-link" class="jumbotron hvr-glow">
+        <h1><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Gallery</h1>
+        <p>The latest art and screenshots!</p>
+        <p><a class="btn btn-primary btn-lg hvr-grow" href="/galleries/{{ page.directory }}" role="button">View</a></p>
     </div>
-    <div id="more-news">
-        <a class="btn btn-sharp btn-sm hvr-push" href="http://{{ page.blog }}"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> More News</a>
+    {% endif %}
+
+    <div id="news">
+        <h2>
+            News
+            <span>
+                <a href="feed://{{ page.blog }}/rss">
+                    <img src="/img/icons/rss.png">
+                </a>
+            </span>
+        </h2>
+        <div id="posts">
+            <img class="loading-indicator" src="/img/ajax-loader.gif" />
+        </div>
+        <div id="more-news">
+            <a class="btn btn-sharp btn-sm hvr-push" href="http://{{ page.blog }}"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> More News</a>
+        </div>
     </div>
 </div>
 

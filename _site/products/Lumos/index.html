@@ -45,7 +45,9 @@
       <div id="website">
           <div id="header">
               <div id="logo">
-                  <img src="/img/logo.png" />
+                  <a href="/">
+                      <img src="/img/logo.png" />
+                  </a>
               </div>
               <nav>
                   <img class="hide-on-mobile" src="/img/concept_art.png" />
@@ -77,133 +79,137 @@
                   </div>
               </div>
           </div>
+          <!-- Hack to let the home page carousel ignore margin rules -->
+          
           <main>
               <h1>Lumos</h1>
   <link rel="stylesheet" href="/css/lightbox.css" />
-<div class="row">
-    <div class="col-md-7">
-        <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="false">
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                
-                <div class="item aspect-ratio active">
-                    <a class="hidden" href="/img/products/lumos/1.png" data-lightbox="highlights">
-                        <img src="/img/products/lumos/1.png" alt="..." class="hvr-grow">
-                    </a>
+<div id="product-page">
+    <div class="row">
+        <div class="col-md-7">
+            <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
                     
-                    <iframe src="https://www.youtube.com/embed/l4FKrllkUnE" frameborder="0" allowfullscreen></iframe>
+                    <div class="item aspect-ratio active">
+                        <a class="hidden" href="/img/products/lumos/1.png" data-lightbox="highlights">
+                            <img src="/img/products/lumos/1.png" alt="..." class="hvr-grow">
+                        </a>
+                        
+                        <iframe src="https://www.youtube.com/embed/l4FKrllkUnE" frameborder="0" allowfullscreen></iframe>
+                        
+                    </div>
+                    
+                    <div class="item  ">
+                        <a class="" href="/img/products/lumos/2.png" data-lightbox="highlights">
+                            <img src="/img/products/lumos/2.png" alt="..." class="hvr-grow">
+                        </a>
+                        
+                    </div>
+                    
+                    <div class="item  ">
+                        <a class="" href="/img/products/lumos/3.png" data-lightbox="highlights">
+                            <img src="/img/products/lumos/3.png" alt="..." class="hvr-grow">
+                        </a>
+                        
+                    </div>
+                    
+                    <div class="item  ">
+                        <a class="" href="/img/products/lumos/4.png" data-lightbox="highlights">
+                            <img src="/img/products/lumos/4.png" alt="..." class="hvr-grow">
+                        </a>
+                        
+                    </div>
+                    
+                    <div class="item  ">
+                        <a class="" href="/img/products/lumos/5.png" data-lightbox="highlights">
+                            <img src="/img/products/lumos/5.png" alt="..." class="hvr-grow">
+                        </a>
+                        
+                    </div>
                     
                 </div>
-                
-                <div class="item  ">
-                    <a class="" href="/img/products/lumos/2.png" data-lightbox="highlights">
-                        <img src="/img/products/lumos/2.png" alt="..." class="hvr-grow">
-                    </a>
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
                     
-                </div>
-                
-                <div class="item  ">
-                    <a class="" href="/img/products/lumos/3.png" data-lightbox="highlights">
-                        <img src="/img/products/lumos/3.png" alt="..." class="hvr-grow">
-                    </a>
+                    <li class="active" data-slide-to="0" data-target="#carousel">
+                        <img src="/img/products/lumos/1.png" alt="..." class="img-thumbnail hvr-pop" data-target="#carousel">
+                    </li>
                     
-                </div>
-                
-                <div class="item  ">
-                    <a class="" href="/img/products/lumos/4.png" data-lightbox="highlights">
-                        <img src="/img/products/lumos/4.png" alt="..." class="hvr-grow">
-                    </a>
+                    <li  data-slide-to="1" data-target="#carousel">
+                        <img src="/img/products/lumos/2.png" alt="..." class="img-thumbnail hvr-pop" data-target="#carousel">
+                    </li>
                     
-                </div>
-                
-                <div class="item  ">
-                    <a class="" href="/img/products/lumos/5.png" data-lightbox="highlights">
-                        <img src="/img/products/lumos/5.png" alt="..." class="hvr-grow">
-                    </a>
+                    <li  data-slide-to="2" data-target="#carousel">
+                        <img src="/img/products/lumos/3.png" alt="..." class="img-thumbnail hvr-pop" data-target="#carousel">
+                    </li>
                     
-                </div>
-                
+                    <li  data-slide-to="3" data-target="#carousel">
+                        <img src="/img/products/lumos/4.png" alt="..." class="img-thumbnail hvr-pop" data-target="#carousel">
+                    </li>
+                    
+                    <li  data-slide-to="4" data-target="#carousel">
+                        <img src="/img/products/lumos/5.png" alt="..." class="img-thumbnail hvr-pop" data-target="#carousel">
+                    </li>
+                    
+                </ol>
             </div>
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                
-                <li class="active" data-slide-to="0" data-target="#carousel">
-                    <img src="/img/products/lumos/1.png" alt="..." class="img-thumbnail hvr-pop" data-target="#carousel">
-                </li>
-                
-                <li  data-slide-to="1" data-target="#carousel">
-                    <img src="/img/products/lumos/2.png" alt="..." class="img-thumbnail hvr-pop" data-target="#carousel">
-                </li>
-                
-                <li  data-slide-to="2" data-target="#carousel">
-                    <img src="/img/products/lumos/3.png" alt="..." class="img-thumbnail hvr-pop" data-target="#carousel">
-                </li>
-                
-                <li  data-slide-to="3" data-target="#carousel">
-                    <img src="/img/products/lumos/4.png" alt="..." class="img-thumbnail hvr-pop" data-target="#carousel">
-                </li>
-                
-                <li  data-slide-to="4" data-target="#carousel">
-                    <img src="/img/products/lumos/5.png" alt="..." class="img-thumbnail hvr-pop" data-target="#carousel">
-                </li>
-                
-            </ol>
         </div>
-    </div>
-    <div class="col-md-5">
-        <div id="product">
-            <div id="product-banner" class="hide-on-mobile">
-                <img alt="" title="" src="/img/products/lumos/banner.png">
-            </div>
-            <p class="product-description">
-               Lumos is an online game service provider offering analytics, diagnostics, and common social functionality services.
+        <div class="col-md-5">
+            <div id="product">
+                <div id="product-banner" class="hide-on-mobile">
+                    <img alt="" title="" src="/img/products/lumos/banner.png">
+                </div>
+                <p class="product-description">
+                   Lumos is an online game service provider offering analytics, diagnostics, and common social functionality services.
 Studios can make informed decisions about what platforms to target, where to focus their development efforts, and help players connect with friends within their games.
 
-            </p>
-            
-
-            
-            <p class="product-info">
-                <strong>Release Date:</strong> July 1, 2011
-            </p>
-            
-            <p class="product-info">
-                <strong>Website:</strong> <a href="https://www.lumospowered.com">www.lumospowered.com</a>
-            </p>
-            
-            <p class="product-info">
-                
-                <strong>Platforms:</strong>
+                </p>
                 
 
                 
-                    
-                    <a href="https://www.lumospowered.com">Web</a>
-                    
+                <p class="product-info">
+                    <strong>Release Date:</strong> July 1, 2011
+                </p>
                 
-            </p>
-            
+                <p class="product-info">
+                    <strong>Website:</strong> <a href="https://www.lumospowered.com">www.lumospowered.com</a>
+                </p>
+                
+                <p class="product-info">
+                    
+                    <strong>Platforms:</strong>
+                    
+
+                    
+                        
+                        <a href="https://www.lumospowered.com">Web</a>
+                        
+                    
+                </p>
+                
+            </div>
         </div>
     </div>
-</div>
 
 
+    
 
-
-<div id="news">
-    <h2>
-        News
-        <span>
-            <a href="feed://lumospowered.tumblr.com/rss">
-                <img src="/img/icons/rss.png">
-            </a>
-        </span>
-    </h2>
-    <div id="posts">
-        <img class="loading-indicator" src="/img/ajax-loader.gif" />
-    </div>
-    <div id="more-news">
-        <a class="btn btn-sharp btn-sm hvr-push" href="http://lumospowered.tumblr.com"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> More News</a>
+    <div id="news">
+        <h2>
+            News
+            <span>
+                <a href="feed://lumospowered.tumblr.com/rss">
+                    <img src="/img/icons/rss.png">
+                </a>
+            </span>
+        </h2>
+        <div id="posts">
+            <img class="loading-indicator" src="/img/ajax-loader.gif" />
+        </div>
+        <div id="more-news">
+            <a class="btn btn-sharp btn-sm hvr-push" href="http://lumospowered.tumblr.com"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> More News</a>
+        </div>
     </div>
 </div>
 
@@ -241,7 +247,7 @@ Studios can make informed decisions about what platforms to target, where to foc
           <footer>
               <hr />
               <img src="/img/footer.png" />
-              <p>Copyright &copy; <time datetime="2016-09-26T12:15:53-04:00">2016</time> Rebel Hippo Inc. All rights reserved.</p>
+              <p>Copyright &copy; <time datetime="2017-04-16T14:51:22-04:00">2017</time> Rebel Hippo Inc. All rights reserved.</p>
           </footer>
       </div>
       <script>

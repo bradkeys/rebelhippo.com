@@ -16,13 +16,13 @@ h1 {
     width: 1100px;
     max-width: 100%;
     margin: 0 auto;
-    padding: 15px 10px;
+    padding: 15px 0px;
     background-color: white;
     box-shadow: 0px 0px 15px black;
 }
 
 #header {
-    padding-top: 20px;
+    padding: 20px 10px 0px 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -118,7 +118,6 @@ main {
     margin-top: 25px;
     margin-bottom: 15px;
     padding: 0px 25px;
-    min-height: 850px;
     overflow: hidden;
 }
 
@@ -194,6 +193,68 @@ footer hr {
     text-align: left;
 }
 
+#home-carousel {
+    margin-top: 40px;
+}
+
+#home-carousel img {
+    width: 1100px;
+}
+
+#home-subtitle {
+    height: 75px;
+    width: 100%;
+    text-align: center;
+    background-image: linear-gradient(right, #111 11%, #333 56%);
+    background-image: -o-linear-gradient(right, #111 11%, #333 56%);
+    background-image: -moz-linear-gradient(right, #111 11%, #333 56%);
+    background-image: -webkit-linear-gradient(right, #111 11%, #333 56%);
+    background-image: -ms-linear-gradient(right, #111 11%, #333 56%);
+    background-image: gradient(right, #111 11%, #333 56%);
+    box-shadow: 0px 2px 5px #444;
+}
+
+#home-subtitle p {
+    font-size: 2em;
+    color: white;
+    padding-top: 20px;
+    text-shadow: 1px 1px 3px #777, 2px 2px 0px #555;
+}
+
+#product-list {
+    margin: 0 auto;
+    margin-top: 25px;
+    position: relative;
+}
+
+#product-list a {
+    text-decoration: none;
+}
+
+.product {
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin: 17px 0px 0px 17px;
+    box-shadow: 0px 0px 5px #444;
+}
+
+.product:hover img {
+    filter: brightness(100%);
+    box-shadow: 0px 0px 10px white;
+}
+
+.product img {
+    display: inline;
+    position: absolute;
+    left: 0;
+}
+
+.product, .product img {
+    width: 325px;
+    height: 183px;
+    border-radius: 15px;
+}
+
 #map {
     width: 600px;
     height: 300px;
@@ -204,7 +265,7 @@ footer hr {
 }
 
 /* Main carousel style */
-.carousel-inner {
+#product-page .carousel-inner {
 /*
     max-width: 800px;
     max-height: 500px;
@@ -212,7 +273,7 @@ footer hr {
     margin: 0 auto;
 }
 
-.carousel-inner img {
+#product-page .carousel-inner img {
     max-height: 360px;
     margin: 0 auto;
 }
@@ -236,7 +297,7 @@ footer hr {
 }
 
 /* Indicators list style */
-.carousel-indicators {
+#product-page .carousel-indicators {
     position: relative;
     bottom: 0;
     left: 0;
@@ -247,7 +308,7 @@ footer hr {
 }
 
 /* Indicators list style */
-.carousel-indicators li, .carousel-indicators li.active {
+#product-page .carousel-indicators li, #product-page .carousel-indicators li.active {
     border: medium none;
     border-radius: 0;
     margin-bottom: 5px;
@@ -258,13 +319,13 @@ footer hr {
     max-width: 18%;
 }
 /* Indicators images style */
-.carousel-indicators img {
+#product-page .carousel-indicators img {
     float: left;
     left: 0;
     background-color: white;
 }
 /* Indicators active image style */
-.carousel-indicators .active img {
+#product-page .carousel-indicators .active img {
     background-color: black;
     opacity: 0.5;
 }
@@ -503,5 +564,15 @@ footer hr {
         padding: 14px 8px;
         letter-spacing: 0px;
         font-weight: 500;
+    }
+
+    #home-subtitle {
+        height: 50px;
+    }
+
+    #home-subtitle p {
+        font-size: 1.2em;
+        color: white;
+        padding-top: 13px;
     }
 }

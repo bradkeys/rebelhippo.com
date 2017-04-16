@@ -5,7 +5,7 @@
 	<meta name="copyright" content="&copy; 2015 Rebel Hippo Inc." />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
 	<meta name="google-site-verification" content="p1mSsTQKTBPCQYTaiKcwBJ9t8n9sgQ1g2lQ--ozQhtM" />
-	<title>Redirecting &middot; Rebel Hippo Inc.</title>
+	<title>Home &middot; Rebel Hippo Inc.</title>
 
 	<!-- Styles -->
 	<link rel="stylesheet" href="/css/bootstrap.min.css" />
@@ -38,14 +38,16 @@
 	<meta name="description" content="Indie game development studio. Creators of the upcoming Just Pretend, Orbert, and Lumos analytics." />
 	<meta name="keywords" content="Lumos, Unity, Ontario, Canada, canadian, game, games, video games, Orbert, Just Pretend, Brad Keys, Bradley Keys, analytics, kickstarter, indie, cmf, canada media fund" />
 
-    <meta http-equiv="refresh" content="0; url=/products/just-pretend">
+    
 </head>
 
   <body>
       <div id="website">
           <div id="header">
               <div id="logo">
-                  <img src="/img/logo.png" />
+                  <a href="/">
+                      <img src="/img/logo.png" />
+                  </a>
               </div>
               <nav>
                   <img class="hide-on-mobile" src="/img/concept_art.png" />
@@ -77,13 +79,70 @@
                   </div>
               </div>
           </div>
+          <!-- Hack to let the home page carousel ignore margin rules -->
+          
+            <div id="home-carousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <a href="/products/just-pretend">
+                <img src="/img/carousel/just-pretend-2.jpg" alt="Just Pretend" title="Just Pretend (Steam &amp; Consoles)">
+            </a>
+        </div>
+        <div class="item">
+            <a href="/products/orbert">
+                <img src="/img/carousel/orbert-2.png" alt="Orbert (iOS, Android)" title="Orbert (iOS, Android)">
+            </a>
+        </div>
+        <div class="item">
+            <a href="/products/lumos">
+                <img src="/img/carousel/lumos.png" alt="Lumos Game Analytics" title="Lumos Game Analytics">
+            </a>
+        </div>
+        <div class="item">
+            <a href="/products/just-pretend">
+                <img src="/img/carousel/just-pretend-1.jpg" alt="Just Pretend" title="Just Pretend (Steam &amp; Consoles)">
+            </a>
+        </div>
+        <div class="item">
+            <a href="/products/orbert">
+                <img src="/img/carousel/orbert-1.png" alt="Orbert (iOS, Android)" title="Orbert (iOS, Android)">
+            </a>
+        </div>
+    </div>
+</div>
+
+<div id="home-subtitle">
+    <p>
+        <em>Developing fantastic video games in Kitchener, Ontario since 2011</em>
+    </p>
+</div>
+          
           <main>
-              
+              <!-- The carousel HTML is located in an include file outside the main div to utilize the full page width -->
+
+<div id="product-list">
+    <a href="/products/just-pretend/">
+        <div class="product hvr-grow">
+            <img src="/img/carousel/just-pretend-1.jpg" title="Just Pretend (coming soon)" />
+        </div>
+    </a>
+    <a href="/products/orbert/">
+        <div class="product hvr-grow">
+            <img src="/img/carousel/orbert-1.png" title="Orbert (iOS &amp; Android)" />
+        </div>
+    </a>
+    <a href="/products/lumos/">
+        <div class="product hvr-grow">
+            <img src="/img/carousel/lumos.png" title="Lumos Game Analytics (no longer available)" />
+        </div>
+    </a>
+</div>
+
           </main>
           <footer>
               <hr />
               <img src="/img/footer.png" />
-              <p>Copyright &copy; <time datetime="2016-09-26T12:15:53-04:00">2016</time> Rebel Hippo Inc. All rights reserved.</p>
+              <p>Copyright &copy; <time datetime="2017-04-16T14:51:22-04:00">2017</time> Rebel Hippo Inc. All rights reserved.</p>
           </footer>
       </div>
       <script>
