@@ -2,16 +2,21 @@
 layout: page
 ---
 
-<link rel="stylesheet" href="/css/lightbox.css" />
+<link rel="stylesheet" href="/css/swipebox.css" />
 
 <h2>Gallery</h2>
 
 <div id="gallery">
     {% for image in page.images reversed %}
-      <a href="/img/products/{{ page.directory }}/gallery/{{ image[0] }}" data-lightbox="gallery" data-title="{{ image[1] }}">
+      <a class="swipebox" href="/img/products/{{ page.directory }}/gallery/{{ image[0] }}" rel="gallery" title="{{ image[1] }}">
           <img class="thumbnail hvr-pop hvr-glow" src="/img/products/{{ page.directory }}/gallery/thumbs/{{ image[0] }}" alt="{{ image[1] }}" title="{{ image[1] }}">
       </a>
     {% endfor %}
 </div>
 
-<script src="/js/lightbox.min.js"></script>
+<script src="/js/jquery.swipebox.min.js"></script>
+<script type="text/javascript">
+;( function( $ ) {
+	$( '.swipebox' ).swipebox();
+} )( jQuery );
+</script>
