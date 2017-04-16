@@ -508,7 +508,14 @@ footer hr {
 }
 
 .platform-badge {
-    width: 175px;
+    width: 150px;
+    margin-top: 15px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.product-info a:hover {
+    text-decoration: none;
 }
 
 /* mobile scaling */
