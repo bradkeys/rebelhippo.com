@@ -92,6 +92,14 @@ layout: page
     </div>
     {% endif %}
 
+    {% if page.everyplay %}
+    <div id="gallery-link" class="jumbotron hvr-glow">
+        <h1><span class="glyphicon glyphicon-film" aria-hidden="true"></span> Replays</h1>
+        <p>Watch videos of game replays shared by our players!</p>
+        <p><a class="btn btn-primary btn-lg hvr-grow" href="{{ page.everyplay }}" role="button">Watch Replays</a></p>
+    </div>
+    {% endif %}
+
     <div id="news">
         <h2>
             News
