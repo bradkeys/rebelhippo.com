@@ -83,7 +83,8 @@
           
           <main>
               <h1>Lumos</h1>
-  <link rel="stylesheet" href="/css/lightbox.css" />
+  <link rel="stylesheet" href="/css/swipebox.css" />
+
 <div id="product-page">
     <div class="row">
         <div class="col-md-7">
@@ -92,7 +93,9 @@
                 <div class="carousel-inner" role="listbox">
                     
                     <div class="item aspect-ratio active">
-                        <a class="hidden" href="/img/products/lumos/1.png" data-lightbox="highlights">
+                        <a  class="swipebox hidden"
+                            href="/img/products/lumos/1.png"
+                            rel="lumos">
                             <img src="/img/products/lumos/1.png" alt="..." class="hvr-grow">
                         </a>
                         
@@ -101,28 +104,36 @@
                     </div>
                     
                     <div class="item  ">
-                        <a class="" href="/img/products/lumos/2.png" data-lightbox="highlights">
+                        <a  class="swipebox "
+                            href="/img/products/lumos/2.png"
+                            rel="lumos">
                             <img src="/img/products/lumos/2.png" alt="..." class="hvr-grow">
                         </a>
                         
                     </div>
                     
                     <div class="item  ">
-                        <a class="" href="/img/products/lumos/3.png" data-lightbox="highlights">
+                        <a  class="swipebox "
+                            href="/img/products/lumos/3.png"
+                            rel="lumos">
                             <img src="/img/products/lumos/3.png" alt="..." class="hvr-grow">
                         </a>
                         
                     </div>
                     
                     <div class="item  ">
-                        <a class="" href="/img/products/lumos/4.png" data-lightbox="highlights">
+                        <a  class="swipebox "
+                            href="/img/products/lumos/4.png"
+                            rel="lumos">
                             <img src="/img/products/lumos/4.png" alt="..." class="hvr-grow">
                         </a>
                         
                     </div>
                     
                     <div class="item  ">
-                        <a class="" href="/img/products/lumos/5.png" data-lightbox="highlights">
+                        <a  class="swipebox "
+                            href="/img/products/lumos/5.png"
+                            rel="lumos">
                             <img src="/img/products/lumos/5.png" alt="..." class="hvr-grow">
                         </a>
                         
@@ -192,7 +203,6 @@ Studios can make informed decisions about what platforms to target, where to foc
         </div>
     </div>
 
-
     
 
     <div id="news">
@@ -240,14 +250,19 @@ Studios can make informed decisions about what platforms to target, where to foc
     })
 </script>
 <script src="/js/tumblr.js"></script>
-<script src="/js/lightbox.min.js"></script>
+<script src="/js/jquery.swipebox.min.js"></script>
+<script type="text/javascript">
+;( function( $ ) {
+	$( '.swipebox' ).swipebox();
+} )( jQuery );
+</script>
 
 
           </main>
           <footer>
               <hr />
               <img src="/img/footer.png" />
-              <p>Copyright &copy; <time datetime="2017-04-16T14:51:22-04:00">2017</time> Rebel Hippo Inc. All rights reserved.</p>
+              <p>Copyright &copy; <time datetime="2017-04-16T15:28:19-04:00">2017</time> Rebel Hippo Inc. All rights reserved.</p>
           </footer>
       </div>
       <script>
