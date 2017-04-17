@@ -121,6 +121,10 @@ main {
     overflow: hidden;
 }
 
+main p {
+    font-size: 1.2em;
+}
+
 main > img {
     max-width: 100%;
 }
@@ -344,10 +348,6 @@ footer hr {
     text-align: justify;
 }
 
-.product-description {
-    font-size: 0.9em;
-}
-
 .product-info {
     margin-bottom: 5px;
 }
@@ -372,7 +372,6 @@ footer hr {
 .blog-post {
     margin-bottom: 25px;
     text-align: justify;
-    font-size: 1.2em;
 }
 
 .blog-post img {
