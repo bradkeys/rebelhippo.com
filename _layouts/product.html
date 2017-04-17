@@ -11,23 +11,26 @@ layout: page
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     {% for slide in page.slides %}
-                    <div class="item {% if forloop.first and page.video != null %}aspect-ratio{% endif %} {% if forloop.first %}active{% endif %}">
-                        <a  class="swipebox {% if forloop.first and page.video != null %}hidden{% endif %}"
+                    {% if forloop.first %}
+                    <div class="item aspect-ratio active">
+                        <iframe src="{{ page.video }}" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    {% else %}
+                    <div class="item">
+                        <a  class="swipebox"
                             href="/img/products/{{ page.directory }}/{{ slide }}"
                             rel="{{ page.directory }}">
                             <img src="/img/products/{{ page.directory }}/{{ slide }}" alt="..." class="hvr-grow">
                         </a>
-                        {% if forloop.first and page.video != null %}
-                        <iframe src="{{ page.video }}" frameborder="0" allowfullscreen></iframe>
-                        {% endif %}
                     </div>
+                    {% endif %}
                     {% endfor %}
                 </div>
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
                     {% for slide in page.slides %}
                     <li {% if forloop.first %}class="active"{% endif %} data-slide-to="{{ forloop.index0 }}" data-target="#carousel">
-                        <img src="/img/products/{{ page.directory }}/{{ slide }}" alt="..." class="img-thumbnail hvr-pop" data-target="#carousel">
+                        <img src="/img/products/{{ page.directory }}/thumbs/{{ slide }}" alt="..." class="img-thumbnail hvr-pop" data-target="#carousel">
                     </li>
                     {% endfor %}
                 </ol>
