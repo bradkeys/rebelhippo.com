@@ -235,7 +235,7 @@ footer hr {
 .product {
     background-repeat: no-repeat;
     display: inline-block;
-    margin: 17px 0px 0px 17px;
+    margin: 17px 5px 0px 17px;
     box-shadow: 0px 0px 5px #444;
 }
 
@@ -580,7 +580,24 @@ footer hr {
 
     #home-subtitle p {
         font-size: 1.1em;
-        color: white;
         padding-top: 13px;
     }
 }
+
+@media all and (max-width: 700px)  {
+    .product {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+    #home-subtitle {
+        height: 40px;
+    }
+
+    #home-subtitle p {
+        font-size: 1em;
+        padding-top: 10px;
+    }
+}
+
