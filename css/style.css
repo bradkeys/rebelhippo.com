@@ -506,6 +506,10 @@ footer hr {
     background-color: black;
 }
 
+.product-badges {
+    text-align: left !important;
+}
+
 .platform-badge {
     width: 150px;
     margin-top: 15px;
